@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(node -e \"const p=require\\('./node_modules/expo/package.json'\\);console.log\\('expo version:',p.version\\);const rn=require\\('./node_modules/react-native/package.json'\\);console.log\\('react-native:',rn.version\\)\")",
+      "Bash(gh api *)",
+      "WebFetch(domain:api.github.com)"
+    ]
+  },
+  "enabledPlugins": {
+    "expo@claude-plugins-official": true
+  }
+}
