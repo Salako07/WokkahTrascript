@@ -20,6 +20,14 @@ export async function saveTranscript(transcript: Transcript): Promise<void> {
   );
 }
 
+export async function updateTranscript(transcript: Transcript): Promise<void> {
+  const existing = await getTranscripts();
+  await AsyncStorage.setItem(
+    STORAGE_KEY,
+    JSON.stringify(existing.map((t) => (t.id === transcript.id ? transcript : t)))
+  );
+}
+
 export async function deleteTranscript(id: string): Promise<void> {
   const existing = await getTranscripts();
   await AsyncStorage.setItem(

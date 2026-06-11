@@ -8,7 +8,7 @@ import {
   Alert,
 } from 'react-native';
 import { router, useFocusEffect } from 'expo-router';
-import { SymbolView } from 'expo-symbols';
+import { Icon } from '@/components/icon';
 import { TranscriptCard } from '@/components/transcript-card';
 import { deleteTranscript, getTranscripts } from '@/services/transcript-storage';
 import type { Transcript } from '@/types';
@@ -63,7 +63,7 @@ export default function HomeScreen() {
         <Pressable
           onPress={() => router.push('/settings')}
           style={{ padding: 4 }}>
-          <SymbolView name="gearshape.fill" size={22} tintColor="#52525b" />
+          <Icon name="gearshape.fill" size={22} tintColor="#52525b" />
         </Pressable>
       </View>
 
@@ -77,7 +77,7 @@ export default function HomeScreen() {
           alignItems: 'center',
           paddingHorizontal: 12,
         }}>
-        <SymbolView name="magnifyingglass" size={15} tintColor="#52525b" />
+        <Icon name="magnifyingglass" size={15} tintColor="#52525b" />
         <TextInput
           value={search}
           onChangeText={setSearch}
@@ -93,7 +93,7 @@ export default function HomeScreen() {
         />
         {search.length > 0 && (
           <Pressable onPress={() => setSearch('')}>
-            <SymbolView name="xmark.circle.fill" size={16} tintColor="#52525b" />
+            <Icon name="xmark.circle.fill" size={16} tintColor="#52525b" />
           </Pressable>
         )}
       </View>
@@ -107,7 +107,7 @@ export default function HomeScreen() {
             gap: 12,
             paddingBottom: 80,
           }}>
-          <SymbolView name="doc.text" size={54} tintColor="#3f3f46" />
+          <Icon name="doc.text" size={54} tintColor="#3f3f46" />
           <Text style={{ color: '#71717a', fontSize: 17 }}>
             {search ? 'No results found' : 'No transcripts yet'}
           </Text>

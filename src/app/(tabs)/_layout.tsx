@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { SymbolView } from 'expo-symbols';
+import { Icon } from '@/components/icon';
 
 export default function TabsLayout() {
   return (
@@ -20,7 +20,7 @@ export default function TabsLayout() {
         options={{
           title: 'Transcripts',
           tabBarIcon: ({ color, focused }) => (
-            <SymbolView
+            <Icon
               name={focused ? 'doc.text.fill' : 'doc.text'}
               size={22}
               tintColor={color}
@@ -33,7 +33,7 @@ export default function TabsLayout() {
         options={{
           title: 'Record',
           tabBarIcon: ({ color, focused }) => (
-            <SymbolView
+            <Icon
               name={focused ? 'mic.circle.fill' : 'mic.circle'}
               size={22}
               tintColor={color}
@@ -46,7 +46,7 @@ export default function TabsLayout() {
         options={{
           title: 'Upload',
           tabBarIcon: ({ color, focused }) => (
-            <SymbolView
+            <Icon
               name={focused ? 'arrow.up.circle.fill' : 'arrow.up.circle'}
               size={22}
               tintColor={color}

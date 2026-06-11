@@ -11,7 +11,7 @@ import {
 import { Audio, InterruptionModeIOS, InterruptionModeAndroid } from 'expo-av';
 import * as Haptics from 'expo-haptics';
 import * as Sharing from 'expo-sharing';
-import { SymbolView } from 'expo-symbols';
+import { Icon } from '@/components/icon';
 import { WaveformAnimation } from '@/components/waveform-animation';
 import { saveTranscript } from '@/services/transcript-storage';
 import { transcribeAudio } from '@/services/whisper-service';
@@ -235,7 +235,7 @@ export default function RecordScreen() {
             alignItems: 'center',
             opacity: pressed ? 0.82 : 1,
           })}>
-          <SymbolView
+          <Icon
             name={isRecording ? 'stop.fill' : 'mic.fill'}
             size={30}
             tintColor="#ffffff"
@@ -263,7 +263,7 @@ export default function RecordScreen() {
                 justifyContent: 'center',
                 alignItems: 'center',
               }}>
-              <SymbolView name="waveform" size={18} tintColor="#818cf8" />
+              <Icon name="waveform" size={18} tintColor="#818cf8" />
             </View>
             <View style={{ flex: 1 }}>
               <Text style={{ color: '#ffffff', fontSize: 15, fontWeight: '600' }}>
@@ -287,7 +287,7 @@ export default function RecordScreen() {
               gap: 8,
               borderCurve: 'continuous' as any,
             })}>
-            <SymbolView name="arrow.down.circle" size={18} tintColor="#818cf8" />
+            <Icon name="arrow.down.circle" size={18} tintColor="#818cf8" />
             <Text style={{ color: '#818cf8', fontSize: 15, fontWeight: '600' }}>
               Download Audio
             </Text>
@@ -319,7 +319,7 @@ export default function RecordScreen() {
             </>
           ) : (
             <>
-              <SymbolView name="text.word.spacing" size={20} tintColor="#ffffff" />
+              <Icon name="text.word.spacing" size={20} tintColor="#ffffff" />
               <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: '600' }}>
                 Transcribe with Whisper
               </Text>
@@ -347,7 +347,7 @@ export default function RecordScreen() {
             <Text style={{ color: '#ffffff', fontSize: 16, fontWeight: '600' }}>
               Transcription
             </Text>
-            <SymbolView name="checkmark.seal.fill" size={18} tintColor="#4ade80" />
+            <Icon name="checkmark.seal.fill" size={18} tintColor="#4ade80" />
           </View>
 
           <Text selectable style={{ color: '#d4d4d8', fontSize: 15, lineHeight: 26 }}>
@@ -369,7 +369,7 @@ export default function RecordScreen() {
                 borderWidth: 1,
                 borderColor: '#166534',
               })}>
-              <SymbolView name="square.and.arrow.down" size={17} tintColor="#4ade80" />
+              <Icon name="square.and.arrow.down" size={17} tintColor="#4ade80" />
               <Text style={{ color: '#4ade80', fontSize: 15, fontWeight: '600' }}>
                 Save Transcript
               </Text>
@@ -383,7 +383,7 @@ export default function RecordScreen() {
                 gap: 8,
                 paddingVertical: 4,
               }}>
-              <SymbolView name="checkmark.circle.fill" size={17} tintColor="#4ade80" />
+              <Icon name="checkmark.circle.fill" size={17} tintColor="#4ade80" />
               <Text style={{ color: '#4ade80', fontSize: 14 }}>
                 Saved to Transcripts
               </Text>

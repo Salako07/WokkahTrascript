@@ -1,3 +1,17 @@
+export interface Summary {
+  overview: string;
+  keyPoints: string[];
+  decisions: string[];
+  nextSteps: string[];
+}
+
+export interface Task {
+  id: string;
+  text: string;
+  assignee?: string;
+  done: boolean;
+}
+
 export interface Transcript {
   id: string;
   title: string;
@@ -8,4 +22,6 @@ export interface Transcript {
   fileSize?: number;
   source: 'recording' | 'upload';
   fileName?: string;
+  tasks?: Task[];
+  summary?: Summary;
 }

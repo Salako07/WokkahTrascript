@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, Text, View } from 'react-native';
 import { router } from 'expo-router';
-import { SymbolView } from 'expo-symbols';
+import { Icon } from '@/components/icon';
 import type { Transcript } from '@/types';
 
 function formatDuration(seconds: number): string {
@@ -64,7 +64,7 @@ export function TranscriptCard({
             paddingVertical: 4,
             borderRadius: 8,
           }}>
-          <SymbolView
+          <Icon
             name={isRecording ? 'mic.fill' : 'arrow.up.doc.fill'}
             size={11}
             tintColor={isRecording ? '#818cf8' : '#4ade80'}

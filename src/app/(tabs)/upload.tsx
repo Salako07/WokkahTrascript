@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import * as DocumentPicker from 'expo-document-picker';
 import * as Haptics from 'expo-haptics';
-import { SymbolView } from 'expo-symbols';
+import { Icon } from '@/components/icon';
 import { saveTranscript } from '@/services/transcript-storage';
 import { transcribeAudio } from '@/services/whisper-service';
 import type { Transcript } from '@/types';
@@ -105,7 +105,7 @@ export default function UploadScreen() {
           borderStyle: 'dashed',
           borderColor: file ? '#6366f1' : '#3f3f46',
         })}>
-        <SymbolView
+        <Icon
           name={file ? 'checkmark.circle.fill' : 'arrow.up.doc.fill'}
           size={44}
           tintColor={file ? '#6366f1' : '#52525b'}
@@ -163,7 +163,7 @@ export default function UploadScreen() {
             </>
           ) : (
             <>
-              <SymbolView
+              <Icon
                 name="text.word.spacing"
                 size={20}
                 tintColor="#ffffff"
@@ -201,7 +201,7 @@ export default function UploadScreen() {
               style={{ color: '#ffffff', fontSize: 16, fontWeight: '600' }}>
               Transcription
             </Text>
-            <SymbolView name="checkmark.seal.fill" size={18} tintColor="#4ade80" />
+            <Icon name="checkmark.seal.fill" size={18} tintColor="#4ade80" />
           </View>
 
           <Text
@@ -225,7 +225,7 @@ export default function UploadScreen() {
                 borderWidth: 1,
                 borderColor: '#166534',
               })}>
-              <SymbolView
+              <Icon
                 name="square.and.arrow.down"
                 size={17}
                 tintColor="#4ade80"
@@ -248,7 +248,7 @@ export default function UploadScreen() {
                 gap: 8,
                 paddingVertical: 4,
               }}>
-              <SymbolView name="checkmark.circle.fill" size={17} tintColor="#4ade80" />
+              <Icon name="checkmark.circle.fill" size={17} tintColor="#4ade80" />
               <Text style={{ color: '#4ade80', fontSize: 14 }}>
                 Saved to Transcripts
               </Text>
